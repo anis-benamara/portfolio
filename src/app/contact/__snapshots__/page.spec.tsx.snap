@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page UI should  display contact page with a heading 1`] = `
+<div>
+  <h2>
+    Contact me
+  </h2>
+</div>
+`;
