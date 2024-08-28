@@ -65,6 +65,6 @@ export function formatDate(date: string, includeRelative: boolean = false) {
     if (!includeRelative) {
         return fullDate
     } else {
-        return `${fullDate} - ${formattedDate}`
+        return `${fullDate} (${formattedDate})`
     }
 }
