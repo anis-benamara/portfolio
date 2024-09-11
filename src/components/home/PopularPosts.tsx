@@ -7,12 +7,13 @@ import { popularPosts } from "@/lib/placeholder-data";
 import { fetcher, fetchUrl } from "@/lib/utils";
 
 import { Icons } from "../Icons";
+import { PopularPostsSkeleton } from "../skeleton/PopularPostsSkeleton";
 
 export default function PopularPosts() {
   const { data, error, isLoading } = useSWR(fetchUrl, fetcher);
 
   if (error) return <div>Failed to load</div>;
-  if (isLoading) return <div>Loading....</div>;
+  if (isLoading) return <PopularPostsSkeleton />;
   return (
     <ul className="overflow-auto">
       {data?.map((post) => (
