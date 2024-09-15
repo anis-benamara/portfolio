@@ -37,7 +37,7 @@ export function GET(request: Request) {
                 padding: "2px 25px 2px 2px",
               }}
             >
-              CB
+              AB
             </span>
             <span
               style={{
