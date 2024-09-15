@@ -11,6 +11,15 @@ export async function generateStaticParams() {
   }));
 }
 
+export function generateMetadata({ params }: { params: { category: string } }) {
+  const { category } = params;
+
+  return {
+    title: category.toLocaleUpperCase(),
+    description: `All ${category} posts`,
+  }
+}
+
 export default function Page({ params }: { params: { category: string } }) {
   const posts = getBlogPosts().filter(
     (post) => post.metadata.category === params.category

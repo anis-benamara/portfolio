@@ -3,6 +3,12 @@ import LatestPosts from "@/components/home/LatestPosts";
 import PopularPosts from "@/components/home/PopularPosts";
 import TopCategories from "@/components/home/TopCategories";
 import { MainNav } from "@/components/MainNav";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Terms of Services',
+  description: 'This page explains the terms of use of the site.',
+}
 
 export default function Home() {
   return (
