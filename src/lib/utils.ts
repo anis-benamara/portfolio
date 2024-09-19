@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 export const fetchUrl =
   process.env.NODE_ENV === "development"
     ? "http://localhost:3000/api"
-    : "https://portfolio-anis-ben.vercel.app/api";
+    : "https://anis-benamara.vercel.app/api";
 
 type ResponseData = {
   category: string;

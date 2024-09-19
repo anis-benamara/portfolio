@@ -2,7 +2,7 @@
 
 import { useFormState } from "react-dom";
 
-import { POSTS } from "@/lib/constants";
+import { CATEGORIES } from "@/lib/constants";
 import { Icons } from "./Icons";
 import Link from "next/link";
 import { Input } from "./ui/input";
@@ -47,13 +47,13 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-md font-semibold">Blog</h3>
             <ul className="space-y-2 text-sm">
-              {POSTS.map((post) => (
-                <li key={post.title}>
+              {CATEGORIES.map((category) => (
+                <li key={category.title}>
                   <Link
-                    href={post.href}
+                    href={category.href}
                     className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
                   >
-                    {post.title}
+                    {category.title}
                   </Link>
                 </li>
               ))}
