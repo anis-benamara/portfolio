@@ -15,11 +15,10 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Icons } from "./Icons";
 import { ModeToggle } from "./ui/mode-toggle";
-import { CATEGORIES } from "@/lib/constants";
 
 
 
-export function MainNav() {
+export function MainNav({ activeCategories = [] }: { activeCategories: { title: string, href: string, description: string} [] }) {
   return (
     <div
       className={cn(
@@ -38,7 +37,7 @@ export function MainNav() {
             <NavigationMenuTrigger>Posts</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {CATEGORIES.map((category) => (
+                {activeCategories.map((category) => (
                   <ListItem
                     key={category.title}
                     title={category.title}

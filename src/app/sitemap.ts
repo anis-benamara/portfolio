@@ -1,7 +1,8 @@
-import { CATEGORIES } from "@/lib/constants";
-import { getBlogPosts } from "./blog/utils";
+import { ACTIVE_CATEGORIES, getBlogPosts } from "./blog/utils";
 
 export const baseURl = "https://anis-benamara.vercel.app/";
+
+
 
 export default async function sitemap() {
   const blogs = getBlogPosts().map((post) => ({
@@ -9,7 +10,7 @@ export default async function sitemap() {
       lastModified: post.metadata.publishedAt,
     }));
 
-  const routes = CATEGORIES.map((route) => ({
+  const routes = ACTIVE_CATEGORIES.map((route) => ({
     url: `${baseURl}/${route.href}`,
     lastModified: new Date().toISOString().split("T")[0],
   }));

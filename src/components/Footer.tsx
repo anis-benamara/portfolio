@@ -2,14 +2,13 @@
 
 import { useFormState } from "react-dom";
 
-import { CATEGORIES } from "@/lib/constants";
 import { Icons } from "./Icons";
 import Link from "next/link";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { createSubscriber } from "@/lib/actions";
 
-export default function Footer() {
+export default function Footer({ activeCategories = [] }: { activeCategories: { title: string, href: string} [] }) {
   const initialState = { message: "", errors: {} };
   const [state, dispatch] = useFormState(createSubscriber, initialState);
 
@@ -47,7 +46,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-md font-semibold">Blog</h3>
             <ul className="space-y-2 text-sm">
-              {CATEGORIES.map((category) => (
+              {activeCategories.map((category) => (
                 <li key={category.title}>
                   <Link
                     href={category.href}

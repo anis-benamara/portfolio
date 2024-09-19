@@ -2,8 +2,9 @@ import Container from "@/components/Container";
 import LatestPosts from "@/components/home/LatestPosts";
 import PopularPosts from "@/components/home/PopularPosts";
 import TopCategories from "@/components/home/TopCategories";
-import { MainNav } from "@/components/MainNav";
+import MainNavEnhanced from "@/components/MainNavEnhanced";
 import { Metadata } from "next";
+
 
 export const metadata: Metadata = {
   description: 'Anis B Amara blog',
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <Container>
-      <MainNav />
+      <MainNavEnhanced />
       <main className="flex flex-col items-start justify-evenly mt-16 md:flex-row">
         <div>
           <LatestPosts />

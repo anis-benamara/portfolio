@@ -1,8 +1,8 @@
 import Container from "@/components/Container";
 import { getPrivacyPolicy } from "../blog/utils";
-import { MainNav } from "@/components/MainNav";
 import { CustomMDX } from "@/components/mdx";
 import { Metadata } from "next";
+import MainNavEnhanced from "@/components/MainNavEnhanced";
 
 export const metadata: Metadata = {
   title: "Privary Policy",
@@ -14,7 +14,7 @@ export default function Page() {
 
   return (
     <Container>
-      <MainNav />
+      <MainNavEnhanced />
       <article className="prose">
         <CustomMDX source={post?.content} />
       </article>

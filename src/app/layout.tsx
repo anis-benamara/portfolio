@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Footer from "@/components/Footer";
 import { siteConfig } from "@/config/site";
+import { ACTIVE_CATEGORIES } from "@/app/blog/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,35 +15,40 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: [
-    'Blog', 'Frontend', 'Javascript', 'React', 'Next.js', 'Tailwind CSS',
+    "Blog",
+    "Frontend",
+    "Javascript",
+    "React",
+    "Next.js",
+    "Tailwind CSS",
   ],
   authors: [
     {
-      name: 'Anis Benamara',
-      url: 'https://github.com/anis-benamara'
-    }
+      name: "Anis Benamara",
+      url: "https://github.com/anis-benamara",
+    },
   ],
-  creator: 'Anis Ben Amara',
+  creator: "Anis Ben Amara",
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
+    type: "website",
+    locale: "en_US",
     url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
     images: [`${siteConfig.url}/og`],
-    creator: '@AnisAmara',
+    creator: "@AnisAmara",
   },
   icons: {
-    shortcut: '/favicon.ico',
-    icon: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
-  }
+    shortcut: "/favicon.ico",
+    icon: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -59,8 +65,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="flex-1">{children}</main>
-          <Footer />
+          {children}
+          <Footer activeCategories={ACTIVE_CATEGORIES} />
         </ThemeProvider>
       </body>
     </html>

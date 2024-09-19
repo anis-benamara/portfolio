@@ -1,6 +1,6 @@
 import Container from "@/components/Container";
 import Header from "@/components/Header";
-import { MainNav } from "@/components/MainNav";
+import MainNavEnhanced from "@/components/MainNavEnhanced";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export default async function AboutPage() {
     <>
       <div className="bg-gray-100 dark:bg-gray-800">
         <Container>
-          <MainNav />
+          <MainNavEnhanced />
           <Header>
             <h1 className="title font-semibold text-2xl tracking-tighter mt-4 capitalize">
               About Me
