@@ -6,8 +6,7 @@ import { MainNav } from "@/components/MainNav";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Terms of Services',
-  description: 'This page explains the terms of use of the site.',
+  description: 'Anis B Amara blog',
 }
 
 export default function Home() {

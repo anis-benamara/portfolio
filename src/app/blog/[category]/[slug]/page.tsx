@@ -83,7 +83,7 @@ export default function Page({
             url: `${baseURl}/blog/${post.metadata.category}/${post.slug}`,
             author: {
               "@type": "Person",
-              name: "Coding Jitsu Blog",
+              name: "Anis B Amara Blog",
             },
           }),
         }}
