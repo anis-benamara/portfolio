@@ -15,7 +15,7 @@ export const siteConfig: SiteConfig = {
   url: "https://portfolio-anis-ben.vercel.app/",
   ogImage: "https://portfolio-anis-ben.vercel.app/og.png",
   links: {
-    twitter: "https://twitter.com/AnisAmara",
+    twitter: "https://x.com/anisbamara",
     github: "https://github.com/anis-benamara",
   },
 };

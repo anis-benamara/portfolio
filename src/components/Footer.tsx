@@ -26,7 +26,7 @@ export default function Footer({ activeCategories = [] }: { activeCategories: { 
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://x.com/AnisDev"
+                href="https://x.com/anisbamara"
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label="X"
@@ -34,7 +34,7 @@ export default function Footer({ activeCategories = [] }: { activeCategories: { 
                 <Icons.x className="h-6 w-6 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300" />
               </a>
               <a
-                href="https://github.com/AnisDev"
+                href="https://github.com/anis-benamara"
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label="Github"
