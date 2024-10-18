@@ -6,19 +6,15 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Icons } from "./Icons";
 import { ModeToggle } from "./ui/mode-toggle";
 
-
-
-export function MainNav({ activeCategories = [] }: { activeCategories: { title: string, href: string, description: string} [] }) {
+export function MainNav() {
   return (
     <div
       className={cn(
@@ -34,20 +30,11 @@ export function MainNav({ activeCategories = [] }: { activeCategories: { title: 
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Posts</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {activeCategories.map((category) => (
-                  <ListItem
-                    key={category.title}
-                    title={category.title}
-                    href={category.href}
-                  >
-                    {category.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
+            <Link href="/blog" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Blog
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/about" legacyBehavior passHref>
