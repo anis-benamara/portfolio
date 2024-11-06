@@ -8,11 +8,13 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <Container>
-      <MainNavEnhanced />
-      <main className="flex flex-col items-start justify-evenly mt-16 md:flex-row">
+    <>
+      <Container>
+        <MainNavEnhanced />
+      </Container>
+      <main className="flex flex-col items-start flex-1 justify-evenly pt-16 md:flex-row bg-coral-500 dark:bg-gray-800">
         <div>Main</div>
       </main>
-    </Container>
+    </>
   );
 }

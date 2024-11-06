@@ -8,12 +8,16 @@ import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { createSubscriber } from "@/lib/actions";
 
-export default function Footer({ activeCategories = [] }: { activeCategories: { title: string, href: string} [] }) {
+export default function Footer({
+  activeCategories = [],
+}: {
+  activeCategories: { title: string; href: string }[];
+}) {
   const initialState = { message: "", errors: {} };
   const [state, dispatch] = useFormState(createSubscriber, initialState);
 
   return (
-    <footer className="bg-gray-100 py-8 dark:bg-gray-800 mt-10">
+    <footer className="bg-coral-100 py-8 dark:bg-gray-700 mt-auto">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-4">

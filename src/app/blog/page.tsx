@@ -5,7 +5,7 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <main className="flex flex-col items-start justify-evenly mt-16 md:flex-row">
+    <main className="flex flex-col items-start justify-evenly pt-16 md:flex-row bg-coral-800 dark:bg-gray-800">
       <div>
         <LatestPosts />
       </div>

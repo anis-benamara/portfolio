@@ -8,6 +8,13 @@ export default function Container({
   children: React.ReactNode;
 }) {
   return (
-    <div className={cn("mx-auto w-full max-w-screen-xl px-4 md:px-20", className)}>{children}</div>
+    <div
+      className={cn(
+        "mx-auto w-full px-4 md:px-20 bg-coral-100 dark:bg-gray-700",
+        className
+      )}
+    >
+      {children}
+    </div>
   );
 }
