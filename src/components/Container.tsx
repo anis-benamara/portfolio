@@ -10,7 +10,7 @@ export default function Container({
   return (
     <div
       className={cn(
-        "mx-auto w-full px-4 md:px-20 bg-coral-100 dark:bg-gray-700",
+        "mx-auto w-full px-4 md:px-20 bg-coral-100 dark:bg-gray-700 flex justify-center",
         className
       )}
     >

@@ -18,7 +18,7 @@ export function MainNav() {
   return (
     <div
       className={cn(
-        "flex flex-col items-start justify-start md:flex-row md:items-center max-w-screen-xl md:justify-between p-5 z-50 bg-coral-100 dark:bg-gray-700"
+        "flex flex-col items-start justify-start w-full md:flex-row md:items-center max-w-screen-xl md:justify-between p-5 z-50 bg-coral-100 dark:bg-gray-700"
       )}
     >
       <Link href="/">

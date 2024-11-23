@@ -15,11 +15,15 @@ export default function Page() {
   );
 
   return (
-    <Container>
-      <MainNavEnhanced />
-      <article className="prose">
-        <CustomMDX source={post?.content} />
-      </article>
-    </Container>
+    <>
+      <Container>
+        <MainNavEnhanced />
+      </Container>
+      <section className="bg-coral-500 dark:bg-gray-800">
+        <article className="prose max-w-screen-xl mx-auto">
+          <CustomMDX source={post?.content} />
+        </article>
+      </section>
+    </>
   );
 }
